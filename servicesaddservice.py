@@ -1,4 +1,4 @@
-def add_service(services):
+def add_service(services, save_function):
     name = input("Nombre del paquete: ")
     price = float(input("Precio: "))
     event_type = input("Tipo de evento: ")
@@ -12,4 +12,5 @@ def add_service(services):
     })
     
     print("Servicio agregado exitosamente.")
+    save_function(services)  # Guardar automáticamente después de agregar
     return services
